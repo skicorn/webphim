@@ -1,0 +1,34 @@
+﻿.size-img {
+    width: 260px;
+    height: 190px;
+    border-radius: 10px 10px 10px 10px;
+}
+.box-video {
+    text-align: center;
+    width: auto;
+    height: auto;
+    color: #ffffff;
+    padding-bottom: 50px;
+    transition: 0.3s;
+}
+    .box-video:hover {
+        backdrop-filter: blur(20px);
+        
+    }
+
+.col {
+    width: 260px;
+    height: 290px;
+    margin: 20px;
+    transition: 0.3s;
+    border-radius:15px;
+}
+.col:hover {
+    box-shadow: 17px 0px 30px white;
+    }
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}

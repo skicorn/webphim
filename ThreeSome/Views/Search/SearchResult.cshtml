@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ThreeSome.Models.Film>
+
+@{
+    ViewBag.Title = "Tìm kiếm cho " + ViewBag.Search;
+    Layout = "~/Views/Shared/_FilmLayout.cshtml";
+}
+<link href="~/Content/Css/trending.css" rel="stylesheet" />
+<link href="~/Content/Css/Main.css" rel="stylesheet" />
+
+
+<div class="container">
+    <div class="row">
+        @if (Model != null && Model.Any())
+        {
+            <h3>KẾT QUẢ CHO "@ViewBag.Search"</h3>
+            foreach (var item in Model)
+            {
+                <a class="video-look" href="@Url.Action("FilmDetail", "FilmTag", new { area = "" })?FilmID=@item.filmID">
+                    <div class="col">
+                        <img class="size-img" src="@Url.Content(item.filmIMG)" alt="" />
+                        <div class="box-video">
+                            <p class="card-title">@Url.Content(item.filmTitle)</p>
+                        </div>
+                    </div>
+                </a>
+            }
+        }
+        else
+        {
+            <h2>KHÔNG TÌM THẤY KẾT QUẢ CHO "@ViewBag.Search"</h2>
+        }
+    </div>
+</div>
